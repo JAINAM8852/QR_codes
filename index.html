@@ -155,15 +155,28 @@
         }
 
         .social-btn:hover {
-            color: white;
-            border-color: var(--color-primary);
             transform: translateX(5px);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            font-weight: 700;
+            filter: brightness(1.05);
         }
 
         .social-btn:hover::before {
             left: 0;
+        }
+
+        .social-btn.website:hover {
+            color: white;
+        }
+
+        .social-btn.instagram:hover {
+            color: white;
+        }
+
+        .social-btn.facebook:hover {
+            color: white;
+        }
+
+        .social-btn.linkedin:hover {
+            color: white;
         }
 
         .social-btn.website {
