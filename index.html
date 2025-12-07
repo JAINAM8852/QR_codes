@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jainam Ferro Alloys - Connect With Us</title>
+    <style>
+        :root {
+            --color-primary: #E74C3C;
+            --color-primary-hover: #C0392B;
+            --color-accent: #FF6B35;
+            --color-accent-hover: #E55A25;
+            --color-purple: #A855A8;
+            --color-dark-blue: #2C3E8F;
+            --color-gradient-end: #6B21A8;
+            --color-bg: #f5f5f5;
+            --color-surface: #ffffff;
+            --color-text: #2C3E8F;
+            --color-text-light: #666666;
+            --color-success: #27ae60;
+            --color-info: #3498db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-gradient-end) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--color-text);
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: var(--color-surface);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: slideUp 0.6s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-gradient-end) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            font-weight: bold;
+            color: var(--color-primary);
+            border: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .content {
+            padding: 30px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: var(--color-text-light);
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 16px 20px;
+            background: var(--color-surface);
+            border: 2px solid var(--color-primary);
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--color-primary);
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--color-primary);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .social-btn:hover {
+            color: white;
+            border-color: var(--color-primary);
+            transform: translateX(5px);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .social-btn:hover::before {
+            left: 0;
+        }
+
+        .social-btn.website {
+            border-color: var(--color-dark-blue);
+            color: var(--color-dark-blue);
+        }
+
+        .social-btn.website::before {
+            background: var(--color-dark-blue);
+        }
+
+        .social-btn.instagram {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .social-btn.instagram::before {
+            background: var(--color-primary);
+        }
+
+        .social-btn.facebook {
+            border-color: var(--color-purple);
+            color: var(--color-purple);
+        }
+
+        .social-btn.facebook::before {
+            background: var(--color-purple);
+        }
+
+        .social-btn.linkedin {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .social-btn.linkedin::before {
+            background: var(--color-accent);
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            font-size: 12px;
+            color: var(--color-text-light);
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .social-btn {
+                padding: 14px 16px;
+                font-size: 15px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/f748648f-6b57-49b1-bac0-7b456d0acfd1" alt="Jainam Ferro Alloys Logo">
+            </div>
+            <h1>Jainam Ferro Alloys</h1>
+            <p>Manufacturer & Exporter | Quality Metals</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <p>Connect with us across all platforms. Choose any option below to learn more about our products and services.</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://jainamferroalloys.com/" target="_blank" rel="noopener noreferrer" class="social-btn website">
+                    <div class="icon">🌐</div>
+                    <span>Visit Website</span>
+                </a>
+
+                <a href="https://www.instagram.com/jainamferro/?igsh=MXFubWZhMTR0cm02eQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+                    <div class="icon">📷</div>
+                    <span>Follow on Instagram</span>
+                </a>
+
+                <a href="https://www.facebook.com/story.php?story_fbid=122095502919059227&substory_index=1458873156240193&id=61581776819075&rdid=RA5SztFyB6HvMslt" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+                    <div class="icon">👥</div>
+                    <span>Like on Facebook</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/jainam-ferro-alloys-74723938b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">
+                    <div class="icon">💼</div>
+                    <span>Connect on LinkedIn</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Scan this QR code to access all our social profiles</p>
+        </div>
+    </div>
+</body>
+</html>
